@@ -168,6 +168,37 @@
     <h2>عِنْدَكَ قِصَّةٌ؟ <em>لِنُضِئْهَا.</em></h2>
     <p class="en ar-line" lang="en">Have a story? Let's light it.</p>
     <p>أَخْبِرْنَا مَاذَا تَصْنَعُ، وَلِمَنْ، وَمَتَى تَحْتَاجُهُ. رَاسِلْنَا بِالْعَرَبِيَّةِ أَوْ بِالْإِنْجِلِيزِيَّةِ.</p>
+    <form class="cform" id="cform" action="https://formsubmit.co/h.abdullah@fanusstudio.com" method="POST">
+      <input type="hidden" name="_subject" value="طلب مشروع جديد · fanusstudio.com/ar">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://fanusstudio.com/ar/?sent=1#contact">
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label>اِسْمُكَ<input name="name" autocomplete="name" required></label>
+      <label>بَرِيدُكَ الْإِلِكْتُرُونِيُّ<input type="email" name="email" autocomplete="email" required></label>
+      <label>مَاذَا نَصْنَعُ؟
+        <select name="project" required>
+          <option value="">اِخْتَرْ</option>
+          <option value="Animated documentary">فِيلْمٌ وَثَائِقِيٌّ مُتَحَرِّكٌ</option>
+          <option value="Arabic story film">فِيلْمُ قِصَّةٍ عَرَبِيَّةٍ</option>
+          <option value="Shorts / Reels from my videos">مَقَاطِعُ قَصِيرَةٌ مِنْ فِيدْيُوهَاتِي</option>
+          <option value="Music video or original song">فِيدْيُو مُوسِيقِيٌّ أَوْ أُغْنِيَةٌ أَصْلِيَّةٌ</option>
+          <option value="Brand film or reel">فِيلْمٌ لِعَلَامَةٍ تِجَارِيَّةٍ</option>
+          <option value="Kids' animation">رُسُومٌ مُتَحَرِّكَةٌ لِلْأَطْفَالِ</option>
+          <option value="Something else">شَيْءٌ آخَرُ</option>
+        </select></label>
+      <label>الْمِيزَانِيَّةُ (بِالدُّولَارِ)
+        <select name="budget">
+          <option value="">لَسْتُ مُتَأَكِّدًا</option>
+          <option value="Under $100">أَقَلُّ مِنْ 100$</option>
+          <option value="$100–500">100$ – 500$</option>
+          <option value="$500–2,000">500$ – 2,000$</option>
+          <option value="$2,000+">أَكْثَرُ مِنْ 2,000$</option>
+        </select></label>
+      <label class="full">أَخْبِرْنَا عَنْهُ<textarea name="message" placeholder="الْجُمْهُورُ، الْمُدَّةُ، اللُّغَةُ، الْمَوْعِدُ، وَرَوَابِطُ لِمَا يُعْجِبُكَ…" required></textarea></label>
+      <button class="cta" type="submit">أَرْسِلْ تَفَاصِيلَ مَشْرُوعِكَ</button>
+    </form>
+    <p class="formok" id="formok" hidden>شُكْرًا لَكَ. وَصَلَتْنَا رِسَالَتُكَ، وَسَنَتَوَاصَلُ مَعَكَ قَرِيبًا.</p>
+    <p class="or">أَوْ رَاسِلْنَا مُبَاشَرَةً</p>
     <a class="mail" href="mailto:h.abdullah@fanusstudio.com?subject=%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D8%A7%D9%86%D9%88%D8%B3">h.abdullah@fanusstudio.com</a>
     <div class="links">
       <a class="cta" href="mailto:h.abdullah@fanusstudio.com?subject=%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%84%D9%81%D8%A7%D9%86%D9%88%D8%B3">رَاسِلِ الِاسْتُودْيُو</a>
@@ -241,6 +272,9 @@ document.querySelectorAll('.reel-frame').forEach(fr => {
   });
 });
 document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+<script>
+(function(){if(location.search.indexOf('sent=1')>-1){var f=document.getElementById('cform'),ok=document.getElementById('formok');if(f&&ok){f.style.display='none';ok.hidden=false;}}})();
 </script>
 </body>
 </html>
