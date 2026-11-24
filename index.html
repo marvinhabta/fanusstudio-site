@@ -192,8 +192,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
     <a class="cta ghost" href="#work">Watch the work</a>
   </div>
   <dl class="stats" aria-label="Results from our own channels">
-    <div><dt>Views on one reel</dt><dd>25,066</dd><span>Zaha Hadid · Facebook</span></div>
-    <div><dt>In under 2 days</dt><dd>21,447</dd><span>The donkey in the well · Facebook</span></div>
+    <div><dt>Views on one Short</dt><dd>26,194</dd><span>Zaha Hadid · Facebook + YouTube</span></div>
+    <div><dt>In under 2 days</dt><dd>25,990</dd><span>The donkey in the well · Facebook + YouTube</span></div>
     <div><dt>Reel views in 5 days</dt><dd>51,500+</dd><span>AlArabi Facebook Page, Nov 19–23</span></div>
     <div><dt>YouTube views</dt><dd>34,000+</dd><span>AlArabi channel since October</span></div>
   </dl>
@@ -223,33 +223,33 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
   <div class="sec-head"><h2>Breakout shorts</h2><span>Our best performers</span></div>
   <div class="reels">
     <article class="reel">
-      <div class="reel-frame" data-reel="https://www.facebook.com/reel/1648816886707754/">
+      <div class="reel-frame" data-yt="9dzIeM077sY">
         <button type="button" class="reel-poster" aria-label="Play the Zaha Hadid reel">
-          <span class="badge">25,066 views</span>
+          <span class="badge">26,194 views</span>
           <span class="ar reel-hook" lang="ar">أَعْلَى بُرْجٍ فِي بَغْدَادَ… صَمَّمَتْهُ امْرَأَةٌ لَمْ تَرَهُ.</span>
           <span class="play" aria-hidden="true"></span>
         </button>
       </div>
       <div class="reel-info">
-        <span class="kicker">AlArabi · Facebook Reel · Fusha</span>
+        <span class="kicker">AlArabi · Short · Fusha</span>
         <b>The tallest tower in Baghdad, designed by a woman who never saw it.</b>
-        <p>A short hook cut from our Zaha Hadid film. More than ten times the views of any reel before it.</p>
-        <a href="https://www.facebook.com/reel/1648816886707754/" rel="noopener">Watch on Facebook →</a>
+        <p>A short hook cut from our Zaha Hadid film: 25,066 views on Facebook and 1,128 on YouTube. More than ten times any reel before it.</p>
+        <a href="https://www.facebook.com/reel/1648816886707754/" rel="noopener">See it on Facebook →</a>
       </div>
     </article>
     <article class="reel">
-      <div class="reel-frame" data-reel="https://www.facebook.com/reel/1124022290399569/">
+      <div class="reel-frame" data-yt="bB3x-PPiFWo">
         <button type="button" class="reel-poster" aria-label="Play the donkey in the well reel">
-          <span class="badge">21,447 views</span>
+          <span class="badge">25,990 views</span>
           <span class="ar reel-hook" lang="ar">رَمَوْا عَلَيْهْ تْرَابْ عَشَانْ يِدْفِنُونَهْ… بَسْ كِلْ حَفْنَةْ تْرَابْ صَارَتْ خَطْوَةْ.</span>
           <span class="play" aria-hidden="true"></span>
         </button>
       </div>
       <div class="reel-info">
-        <span class="kicker">AlArabi · Facebook Reel · Khaleeji</span>
+        <span class="kicker">AlArabi · Short · Khaleeji</span>
         <b>The donkey in the well: every handful of dirt became a step.</b>
-        <p>An animated parable in Gulf Arabic, gold line art on black. Our fastest-growing post so far.</p>
-        <a href="https://www.facebook.com/reel/1124022290399569/" rel="noopener">Watch on Facebook →</a>
+        <p>An animated parable in Gulf Arabic, gold line art on black: 21,447 views on Facebook and 4,543 on YouTube in under two days. Our fastest-growing post so far.</p>
+        <a href="https://www.facebook.com/reel/1124022290399569/" rel="noopener">See it on Facebook →</a>
       </div>
     </article>
   </div>
@@ -366,9 +366,9 @@ select(0);
 document.querySelectorAll('.reel-frame').forEach(fr => {
   fr.querySelector('button').addEventListener('click', () => {
     const f = document.createElement('iframe');
-    f.src = 'https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(fr.dataset.reel) + '&show_text=false&autoplay=true';
+    f.src = 'https://www.youtube-nocookie.com/embed/' + fr.dataset.yt + '?autoplay=1&rel=0';
     f.title = fr.querySelector('button').getAttribute('aria-label');
-    f.allow = 'autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
     f.allowFullscreen = true;
     fr.innerHTML = ''; fr.appendChild(f);
   });
