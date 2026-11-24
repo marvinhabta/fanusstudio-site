@@ -121,6 +121,33 @@ section.wrap{padding-top:clamp(56px,8vw,96px)}
 .voice span{font:500 12px/1.6 var(--mono);color:var(--muted)}
 .honest{border-left:2px solid var(--amber);padding:4px 0 4px 16px;color:var(--muted);font-size:15px}
 
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin:40px 0 0;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+@media (max-width:880px){.stats{grid-template-columns:1fr 1fr}}
+.stats div{background:var(--panel);padding:18px 20px;display:grid;gap:4px}
+.stats dt{font:500 11px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.stats dd{margin:0;font:400 clamp(36px,4.6vw,52px)/1 var(--display);color:var(--amber);font-variant-numeric:tabular-nums}
+.stats span{font-size:13px;color:var(--muted)}
+.asof{margin:10px 0 0;font:400 12px/1.4 var(--mono);color:var(--muted)}
+
+/* breakout reels */
+.reels{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:880px){.reels{grid-template-columns:1fr}}
+.reel{display:grid;grid-template-columns:minmax(0,220px) 1fr;gap:20px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+@media (max-width:480px){.reel{grid-template-columns:1fr}}
+.reel-frame{position:relative;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:#000}
+.reel-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.reel-poster{all:unset;cursor:pointer;position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:14px;background:radial-gradient(90% 60% at 50% 30%,rgba(243,171,60,.22),transparent 70%),#0b0a09;box-sizing:border-box}
+.reel-poster:focus-visible{outline:2px solid var(--amber)}
+.badge{align-self:flex-start;font:700 12px/1 var(--mono);background:var(--amber);color:#17120a;border-radius:999px;padding:7px 10px}
+.reel-hook{font:700 19px/1.7 var(--ar);color:var(--text);text-align:center;margin-top:auto;margin-bottom:auto}
+.reel-poster .play{position:absolute;left:50%;top:auto;bottom:18px;transform:translateX(-50%);width:56px;height:56px}
+.reel-poster .play::before{border-left-width:16px;border-top-width:10px;border-bottom-width:10px;margin-left:4px}
+.reel-info{display:grid;gap:8px;align-content:start}
+.reel-info b{font:400 26px/1.15 var(--display)}
+.reel-info p{margin:0;color:var(--muted);font-size:15px}
+.reel-info a{font:500 13px/1 var(--mono);text-decoration:none}
+
 /* contact */
 .contact{margin:clamp(56px,8vw,96px) 0 0;border:1px solid var(--line);border-radius:14px;background:radial-gradient(120% 140% at 0% 0%,rgba(243,171,60,.16),transparent 55%),var(--panel);padding:clamp(28px,5vw,56px)}
 .contact h2{font:400 clamp(40px,6vw,72px)/.95 var(--display);margin:0;text-wrap:balance}
@@ -145,6 +172,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
     </a>
     <ul>
       <li><a href="#work">Work</a></li>
+      <li><a href="#breakouts">Results</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#studio">Studio</a></li>
@@ -163,6 +191,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
     <a class="cta" href="#contact">Start a project</a>
     <a class="cta ghost" href="#work">Watch the work</a>
   </div>
+  <dl class="stats" aria-label="Results from our own channels">
+    <div><dt>Views on one reel</dt><dd>25,066</dd><span>Zaha Hadid · Facebook</span></div>
+    <div><dt>In under 2 days</dt><dd>21,447</dd><span>The donkey in the well · Facebook</span></div>
+    <div><dt>Reel views in 5 days</dt><dd>51,500+</dd><span>AlArabi Facebook Page, Nov 19–23</span></div>
+    <div><dt>YouTube views</dt><dd>34,000+</dd><span>AlArabi channel since October</span></div>
+  </dl>
+  <p class="asof">Numbers from Meta and YouTube analytics, as of 23 November 2026.</p>
 </header>
 
 <div class="wrap" id="work">
@@ -183,6 +218,42 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
     <div class="clips" id="clips" role="list"></div>
   </div>
 </div>
+
+<section class="wrap" id="breakouts">
+  <div class="sec-head"><h2>Breakout shorts</h2><span>Our best performers</span></div>
+  <div class="reels">
+    <article class="reel">
+      <div class="reel-frame" data-reel="https://www.facebook.com/reel/1648816886707754/">
+        <button type="button" class="reel-poster" aria-label="Play the Zaha Hadid reel">
+          <span class="badge">25,066 views</span>
+          <span class="ar reel-hook" lang="ar">أَعْلَى بُرْجٍ فِي بَغْدَادَ… صَمَّمَتْهُ امْرَأَةٌ لَمْ تَرَهُ.</span>
+          <span class="play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="reel-info">
+        <span class="kicker">AlArabi · Facebook Reel · Fusha</span>
+        <b>The tallest tower in Baghdad, designed by a woman who never saw it.</b>
+        <p>A short hook cut from our Zaha Hadid film. More than ten times the views of any reel before it.</p>
+        <a href="https://www.facebook.com/reel/1648816886707754/" rel="noopener">Watch on Facebook →</a>
+      </div>
+    </article>
+    <article class="reel">
+      <div class="reel-frame" data-reel="https://www.facebook.com/reel/1124022290399569/">
+        <button type="button" class="reel-poster" aria-label="Play the donkey in the well reel">
+          <span class="badge">21,447 views</span>
+          <span class="ar reel-hook" lang="ar">رَمَوْا عَلَيْهْ تْرَابْ عَشَانْ يِدْفِنُونَهْ… بَسْ كِلْ حَفْنَةْ تْرَابْ صَارَتْ خَطْوَةْ.</span>
+          <span class="play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="reel-info">
+        <span class="kicker">AlArabi · Facebook Reel · Khaleeji</span>
+        <b>The donkey in the well: every handful of dirt became a step.</b>
+        <p>An animated parable in Gulf Arabic, gold line art on black. Our fastest-growing post so far.</p>
+        <a href="https://www.facebook.com/reel/1124022290399569/" rel="noopener">Watch on Facebook →</a>
+      </div>
+    </article>
+  </div>
+</section>
 
 <section class="wrap" id="services">
   <div class="sec-head"><h2>What we make</h2><span>Services</span></div>
@@ -292,6 +363,16 @@ WORK.forEach((w, i) => {
   clipsEl.appendChild(c);
 });
 select(0);
+document.querySelectorAll('.reel-frame').forEach(fr => {
+  fr.querySelector('button').addEventListener('click', () => {
+    const f = document.createElement('iframe');
+    f.src = 'https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(fr.dataset.reel) + '&show_text=false&autoplay=true';
+    f.title = fr.querySelector('button').getAttribute('aria-label');
+    f.allow = 'autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share';
+    f.allowFullscreen = true;
+    fr.innerHTML = ''; fr.appendChild(f);
+  });
+});
 document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
