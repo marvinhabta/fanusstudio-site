@@ -64,6 +64,14 @@ h1 em{color:var(--amber)}
 .lede b{color:var(--text);font-weight:500}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 
+
+/* showreel */
+.showreel{margin:32px 0 0;position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#000}
+.showreel video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000}
+.showreel .snd{position:absolute;right:14px;top:14px;display:inline-flex;align-items:center;gap:8px;background:rgba(15,14,13,.82);color:var(--text);border:1px solid var(--amber);border-radius:999px;padding:9px 16px;font:700 13px/1 var(--body);cursor:pointer}
+.showreel .snd:hover{background:var(--amber);color:#17120a}
+.reel-cap{margin:10px 0 0;font:500 12px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
 /* monitor */
 .suite{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px}
 @media (max-width:880px){.suite{grid-template-columns:1fr}}
@@ -194,6 +202,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
     <a class="cta" href="#contact">Start a project</a>
     <a class="cta ghost" href="#work">Watch the work</a>
   </div>
+
+  <figure class="showreel" aria-label="Fanus Studio showreel">
+    <video id="reel" src="assets/fanus-showreel.mp4" poster="assets/fanus-showreel-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <button class="snd" id="reelSnd" type="button" aria-pressed="false">&#128264; Sound on</button>
+  </figure>
+  <p class="reel-cap">Showreel · each full film next to its Short, cut to the same voice</p>
   <dl class="stats" aria-label="Results from our own channels">
     <div><dt>Views on one Short</dt><dd>26,194</dd><span>Zaha Hadid · Facebook + YouTube</span></div>
     <div><dt>In under 2 days</dt><dd>25,990</dd><span>The donkey in the well · Facebook + YouTube</span></div>
@@ -377,6 +391,12 @@ document.querySelectorAll('.reel-frame').forEach(fr => {
   });
 });
 document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+
+<script>
+(function(){var v=document.getElementById('reel'),b=document.getElementById('reelSnd');if(!v||!b)return;
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();}
+b.addEventListener('click',function(){v.muted=!v.muted;if(!v.muted){v.play();}b.setAttribute('aria-pressed',String(!v.muted));b.innerHTML=v.muted?'&#128264; Sound on':'&#128263; Mute';});})();
 </script>
 </body>
 </html>
