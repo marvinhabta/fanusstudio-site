@@ -168,6 +168,37 @@
     <h2>Have a story? <em>Let's light it.</em></h2>
     <p class="ar ar-line" lang="ar">عِنْدَكَ قِصَّةٌ؟ رَاسِلْنَا بِالْعَرَبِيَّةِ أَوْ بِالْإِنْجْلِيزِيَّةِ.</p>
     <p>Tell us what you're making, who it's for and when you need it.</p>
+    <form class="cform" id="cform" action="https://formsubmit.co/h.abdullah@fanusstudio.com" method="POST">
+      <input type="hidden" name="_subject" value="New project enquiry · fanusstudio.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://fanusstudio.com/?sent=1#contact">
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label>Your name<input name="name" autocomplete="name" required></label>
+      <label>Email<input type="email" name="email" autocomplete="email" required></label>
+      <label>What are we making?
+        <select name="project" required>
+          <option value="">Choose one</option>
+          <option>Animated documentary</option>
+          <option>Arabic story film</option>
+          <option>Shorts / Reels from my videos</option>
+          <option>Music video or original song</option>
+          <option>Brand film or reel</option>
+          <option>Kids' animation</option>
+          <option>Something else</option>
+        </select></label>
+      <label>Budget (USD)
+        <select name="budget">
+          <option value="">Not sure yet</option>
+          <option>Under $100</option>
+          <option>$100–500</option>
+          <option>$500–2,000</option>
+          <option>$2,000+</option>
+        </select></label>
+      <label class="full">Tell us about it<textarea name="message" placeholder="Audience, length, language (Arabic / English), deadline, links to anything you like…" required></textarea></label>
+      <button class="cta" type="submit">Send project details</button>
+    </form>
+    <p class="formok" id="formok" hidden>Thanks. Your message is on its way. We'll be in touch soon.</p>
+    <p class="or">Or write to us directly</p>
     <a class="mail" href="mailto:h.abdullah@fanusstudio.com?subject=New%20project%20for%20Fanus%20Studio">h.abdullah@fanusstudio.com</a>
     <div class="links">
       <a class="cta" href="mailto:h.abdullah@fanusstudio.com?subject=New%20project%20for%20Fanus%20Studio">Email the studio</a>
@@ -241,6 +272,9 @@ document.querySelectorAll('.reel-frame').forEach(fr => {
   });
 });
 document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+<script>
+(function(){if(location.search.indexOf('sent=1')>-1){var f=document.getElementById('cform'),ok=document.getElementById('formok');if(f&&ok){f.style.display='none';ok.hidden=false;}}})();
 </script>
 </body>
 </html>
