@@ -181,3 +181,8 @@ html[lang=ar] .cform input,html[lang=ar] .cform select,html[lang=ar] .cform text
 html[lang=ar] .contact .or{font:700 14px/1.4 var(--ar);letter-spacing:0}
 @media (max-width:640px){.cform{grid-template-columns:1fr}}
 .cform[hidden]{display:none}
+
+/* service prices */
+.cell .from{display:inline-block;align-self:flex-start;justify-self:start;width:max-content;margin-top:12px;font:600 13px/1 var(--mono);letter-spacing:.04em;color:var(--amber);border:1px solid rgba(243,171,60,.45);border-radius:999px;padding:7px 12px}
+html[lang=ar] .cell .from{font:700 14px/1.2 var(--ar);letter-spacing:0}
+.price-note{margin:14px 0 0;font-size:14px;color:var(--muted)}
