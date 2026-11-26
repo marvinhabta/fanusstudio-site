@@ -199,3 +199,9 @@ html[lang=ar] .cell .from{font:700 14px/1.2 var(--ar);letter-spacing:0}
 .quote .tr{margin:0;font:400 clamp(20px,2.2vw,24px)/1.3 var(--display);font-style:italic;color:var(--text)}
 .quote p{margin:0;color:var(--muted)}
 html[lang=ar] .quote .kicker{font:700 13px/1.6 var(--ar);letter-spacing:0;text-transform:none}
+
+/* growth line */
+.growth{margin:14px 0 0;font:500 15px/1.5 var(--mono);color:var(--muted)}
+.growth b{color:var(--amber);font-weight:600}
+.growth span{font-size:12px}
+html[lang=ar] .growth{font-family:var(--ar)}
